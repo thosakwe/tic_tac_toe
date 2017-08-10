@@ -4,10 +4,12 @@
 //
 #include "tile.h"
 
-char *Tile::get_marker() {
-    return nullptr;
+const char *Tile::get_marker() {
+    return marker_;
 }
 
-void Tile::set_marker(char *) {
-
+void Tile::set_marker(const char *marker) {
+    if (marker_ != nullptr)
+        throw std::logic_error("This tile already has a marker.");
+    marker_ = marker;
 }

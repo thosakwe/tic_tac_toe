@@ -5,12 +5,14 @@
 #ifndef TIC_TAC_TOE_TILE_H
 #define TIC_TAC_TOE_TILE_H
 
+#include <stdexcept>
+
 class Tile {
 public:
-    char* get_marker();
-    void set_marker(char*);
+    const char* get_marker();
+    void set_marker(const char*);
 private:
-    char* marker_ = nullptr;
+    const char* marker_ = nullptr;
 };
 
 #endif //TIC_TAC_TOE_TILE_H

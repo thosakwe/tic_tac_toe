@@ -1,5 +1,6 @@
 #include <iostream>
 #include "game.h"
+#include "user_controlled_player.h"
 
 int main(int argc, char **argv) {
     int board_size = 3;
@@ -16,9 +17,11 @@ int main(int argc, char **argv) {
         }
     }
 
-    auto *game = new Game(board_size, nullptr, nullptr);
-    game->get_board()->print();
-    //game->start();
+    Player* player1 = new UserControlledPlayer("X");
+
+    auto *game = new Game(board_size, player1, nullptr);
+    game->start();
     delete (game);
+    //delete(player1);
     return 0;
 }

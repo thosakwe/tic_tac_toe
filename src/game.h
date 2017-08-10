@@ -7,6 +7,7 @@
 
 
 #include <exception>
+#include <zconf.h>
 #include "board.h"
 #include "player.h"
 

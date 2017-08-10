@@ -14,7 +14,9 @@ public:
     explicit Board(int size);
     int get_size();
     std::vector<std::vector<Tile *> *> get_grid();
-    void print();
+    bool is_full();
+
+    void Print();
 private:
     int size_;
     std::vector<std::vector<Tile*>*> grid_;

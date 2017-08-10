@@ -26,10 +26,18 @@ void Game::start() {
     if (started_)
         throw std::logic_error("The game has already started.");
 
-    // TODO: Figure out if a player has won
     // Should be defined on Board
-    while (true) {
+    while (!board_->is_full()) {
         turn_count_++;
+
         _player1->takeTurn(turn_count_, board_, _player2);
+
+        std::cout << "Turn #" << turn_count_ << std::endl << std::endl;
+        board_->Print();
+        sleep(2);
     }
+
+    std::cout << "Game over!" << std::endl;
+
+    // TODO: Figure out if a player has won
 }

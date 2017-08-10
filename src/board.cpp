@@ -27,7 +27,20 @@ std::vector<std::vector<Tile *> *> Board::get_grid() {
     return grid_;
 }
 
-void Board::print() {
+bool Board::is_full() {
+    for (unsigned int i = 0; i < size_; i++) {
+        std::vector<Tile *> *row = grid_.at(i);
+
+        for (unsigned int col = 0; col < size_; col++) {
+            if (row->at(col)->get_marker() == nullptr)
+                return false;
+        }
+    }
+
+    return true;
+}
+
+void Board::Print() {
     for (unsigned int i = 0; i < size_; i++) {
         if (i > 0) {
             std::cout << std::endl;
@@ -48,4 +61,6 @@ void Board::print() {
             else std::cout << tile->get_marker();
         }
     }
+
+    std::cout << std::endl << std::endl;
 }
