@@ -1,0 +1,6 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="tic_tac_toe (10x10)" type="CMakeRunConfiguration" factoryName="Application" singleton="true" PROGRAM_PARAMS="10" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tic_tac_toe" TARGET_NAME="tic_tac_toe" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tic_tac_toe" RUN_TARGET_NAME="tic_tac_toe">
+    <envs />
+    <method />
+  </configuration>
+</component>

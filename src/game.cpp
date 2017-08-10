@@ -34,7 +34,6 @@ void Game::start() {
 
         std::cout << "Turn #" << turn_count_ << std::endl << std::endl;
         board_->Print();
-        sleep(2);
     }
 
     std::cout << "Game over!" << std::endl;
