@@ -17,6 +17,8 @@ public:
     bool is_full();
 
     void Print();
+    Tile* TileAt(unsigned int row, unsigned int col);
+    const char* Winner(const char** markers, int length);
 private:
     int size_;
     std::vector<std::vector<Tile*>*> grid_;

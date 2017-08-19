@@ -7,7 +7,6 @@
 
 
 #include <exception>
-#include <zconf.h>
 #include "board.h"
 #include "player.h"
 
@@ -17,10 +16,13 @@ public:
     ~Game();
     Board* get_board();
     int get_turn_count();
-    void start();
+    const char* start();
+
+    static const int possible_markers_count = 2;
 private:
     Board *board_;
     Player *_player1, *_player2;
+    const char** possible_markers = new const char*[possible_markers_count];
     bool started_ = false;
     int turn_count_ = 0;
 };
